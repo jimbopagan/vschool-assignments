@@ -1,0 +1,19 @@
+body{
+  background-color: lightyellow;
+}
+h1{
+  color: red;
+  display: flex;
+  flex-direction: column;
+  background-color: skyblue;
+  /*justify-content: center;*/
+  align-items: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+  border: 5px dashed lightblue;
+  margin: 0% 20% 20% 20%;
+}

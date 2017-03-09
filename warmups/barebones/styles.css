@@ -1,0 +1,13 @@
+h1 {
+  color:red;
+  text-align: center;}
+p {
+  margin: 20px;
+  padding: 20px;}
+#other:hover{
+  text-decoration: none;
+  background-color: black}
+#other {
+  color: red;
+  text-decoration: underline;
+  text-transform: capitalize;}

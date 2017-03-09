@@ -1,0 +1,117 @@
+img{width: 150px;
+    height: 150px;}
+
+html{
+  background-image: url('./img/super-mario-world-05.png');
+  background-size: cover;
+  height: 100vh;
+  background-color: white;
+}
+
+
+.container{
+  padding: 10px;
+  margin: 30px;
+  border: 5px solid red;
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  align-items: center;;
+  justify-content: space-around;
+}
+
+.second-container{
+  padding-bottom: 10px;
+  margin: 70px;
+  border: 5px dashed red;
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;;
+
+}
+.badies{
+  width: 50px;
+  height: 50px;
+}
+
+
+li, h3, h1, footer{
+  color: black;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+ul, li, form{
+  font-size: medium;
+}
+
+.billHead{
+  color: red;
+
+}
+
+#totalButton{
+  background-color: blue;
+  color: white;
+
+}
+
+
+
+footer{
+  padding:10px;
+  margin: 30px;
+  border: 5px solid red;
+  background-color: pink;
+  display: flex;
+  /*flex-direction: row;*/
+  /*align-items: flex-start;;*/
+  justify-content:space-around;
+}
+
+thirdContainer{
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+container2{
+  background-color: pink;
+  background-size: cover;
+  height: 100vh
+}
+
+.social{
+  height:30px;
+}
+.mobile-view{
+  display: none;
+}
+
+nav.desktop-view ul{
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+
+}
+.hamburger{
+  font-size: 30px;
+}
+
+@media screen and (max-width:875px) {
+  nav.desktop-view ul {
+    display:none;
+  }
+}
+
+@media screen and (max-width:875px){
+  nav.mobile-view {
+    display:block;
+    padding: 10px;
+}
+
+.social {
+  float:right;
+  padding-right: 5px;
+}

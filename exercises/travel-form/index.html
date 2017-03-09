@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Form</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+  <h1>AIR BACON</h1>
+    <form id='form'>
+      <div class='row'>
+        <div class='column'>
+          First Name: <input name="fname" type='text'/>
+        </div>
+        <div class='column'>
+          Last Name: <input name="lname" type='text'/>
+        </div>
+        <div class='column'>
+          Age: <input name="age" type='number'/>
+        </div>
+        <div class='column'>
+          Gender:
+          Male<input name="gender" type='radio' value="male"/>
+          Female:<input name="gender" type='radio' value="female"/>
+        </div>
+      </div>
+      <div class='row'>
+        Traveling to: <select id="myPlace">
+          <option name='places' value="India">India</option>
+          <option name='places' value="Europe">Europe</option>
+          <option name='places' value="Moon">Moon</option>
+          <option name='places' value="None">None</option>
+        </select>
+      </div>
+      <div class='row'>
+        Dietary restrictions:
+        <input type="checkbox" name="foods" value="vegetarian"> vegetarian<br>
+        <input type="checkbox" name="foods" value="kosher">kosher<br />
+        <input type="checkbox" name="foods" value="lactose">lactose<br>
+        <input type="checkbox" name="foods" value="free">free<br />
+      </div>
+      <div >
+        <!-- <input type="button" onclick="myFunction()" value="Submit"> -->
+        <input id='button' type='button' value='Submit'/>
+
+      </div>
+    </form>
+
+
+    <script src='app.js'></script>
+  </body>
+</html>

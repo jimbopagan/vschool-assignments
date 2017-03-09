@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>FORMS</title>
+      <meta charset='utf-8'/>
+      <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+      <form>
+        <div class='row'>
+          <div class='col-3'>
+            <strong>Dates</strong>
+          </div>
+          <div class='col-3'>
+            Check in: <input type='date' name='check-in'/>
+          </div>
+          <div class='col-3'>
+            Check out: <input type='date' name='check-out'/>
+          </div>
+          <div class='col-3'>
+            <select>
+              <option value='1'>1 Guest</option>
+              <option value='2'>2 Guest</option>
+              <option value='3'>3 Guest</option>
+              <option value='4'>4 Guest</option>
+            </select>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-3'>
+            <strong>Room Types</strong>
+          </div>
+          <div class='col-3'>
+            Entire Home <input type='checkbox' name='room-type' value='Entire Home' />
+          </div>
+          <div class='col-3'>
+            Private Room <input type='checkbox' name='room-type' value="Private Room" checked="checked"/>
+          </div>
+          <div class='col-3'>
+            Sahred Room <input type='checkbox' name='room-type' value='Shared Room'/>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-3'>
+            <strong>Price Range</strong>
+          </div>
+          <div class='col-3'>
+            <input type='range' min='0' max='1000'/>
+          </div>
+        </div>
+      </form>
+    </body>
+</html>

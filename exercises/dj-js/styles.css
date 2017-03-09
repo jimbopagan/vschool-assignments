@@ -1,0 +1,30 @@
+body{
+  background-color: lightgreen;
+}
+
+.container{
+  background-color: lightyellow;
+}
+.row1{
+  display: inline-block;
+  border: 10px solid black;
+  min-height: 10px;
+  width: 10%;
+
+
+}
+/*#first1{
+  background-color: blue
+}*/
+/*#row2{
+  background-color: red;
+}
+#row3{
+  background-color: yellow;
+}
+#row4{
+  background-color: green;
+}
+#row5{
+  background-color: orange;
+}*/
