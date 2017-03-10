@@ -1,0 +1,7 @@
+{
+  "appetizers": [{"hot wings": ["hot", "medium", "for a child"], "Sides": "Comes with celery and ranch or blue cheese"}, {"pot stickers":["pork", "chicken"]}, {"denti stiks":["beef", "regular"]}, {"empanadas":["pizza", "beef"]}],
+  "cold sandwiches": [{"turkey": ["mayo, tomato, and lettuce"]}, {"american" : ["mayo, tomato, and lettuce"]}, {"cajun turkey" : ["mayo, tomato, and lettuce"]}, {"club": ["mayo, tomato, and lettuce"]}],
+  "hot sandwiches": [{"cuban": ["regular", {"Obama Cuban": ["with honey drizzled on top"]}]}, {"media noche" : ["mayo, tomato, and lettuce"]}, {"pork": ["mayo, tomato, and lettuce"]}],
+  "desserts": [{"ice cream": ["creamy"]}, {"pie": ["jsut like grandmas"]}, {"flan": ["homemade"]}],
+  "drinks": [{"coffee": ["regular", "decaf"]}, {"Soda": ["Coke", "Diet", "Sprite"]}]
+}
