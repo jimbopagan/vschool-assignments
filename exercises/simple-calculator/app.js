@@ -1,10 +1,9 @@
 function addFunk() {
     var addNum1 = document.getElementById("addNum1");
     var addNum2 = document.getElementById("addNum2");
-    var addColor = document.querySelector("add");
     var add1 = parseInt(addNum1.value);
     var add2 = parseInt(addNum2.value);
-    var body = document.getElementById('body');
+
     var total = add1 + add2;
     // create empty <p> tag
     var p = document.createElement("p");
@@ -14,9 +13,8 @@ function addFunk() {
     p.appendChild(txtNode);
 
     // get the html and attach p as the child of the html
-    var myBod = document.getElementById("body");
+    var myBod = document.getElementById("total");
     myBod.appendChild(p);
-    document.body.setAtribute('click', turnBlue);
 }
 
 function subtractFunk() {
@@ -34,7 +32,7 @@ function subtractFunk() {
     p.appendChild(txtNode);
 
     // get the html and attach p as the child of the html
-    var myBod = document.getElementById("body");
+    var myBod = document.getElementById("total");
     myBod.appendChild(p);
 }
 
@@ -53,6 +51,6 @@ function multiplyFunk() {
     p.appendChild(txtNode);
 
     // get the html and attach p as the child of the html
-    var myBod = document.getElementById("body");
+    var myBod = document.getElementById("total");
     myBod.appendChild(p);
 }
