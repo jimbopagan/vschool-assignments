@@ -5,7 +5,7 @@ var max = 30;
 var i = 0;
 var player = {
   name: 'BL Thomas',
-  hitPoints: [],///should bea funciton that gets a random number
+  hitPoints: [],
   defense:[],
   attack:[],
   run:[],
@@ -13,46 +13,48 @@ var player = {
 }
 var enemy1 = {
   name: 'BIG MAC',
-  hitPoints: 10,///should bea funciton that gets a random number
-  defense:[30],
-  attack:[20],
-  run:[0];
+  hitPoints: [40],
+  defense:[],
+  attack:[],
+  run:[],
   inventory:['Double Cheeseburger']
 };
 var enemy2 = {
   name: 'WHOOPER',
-  hitPoints: 40,///should bea funciton that gets a random number
-  defense:[50],
-  attack:[40],
-  run:[0];
+  hitPoints: [60],
+  defense:[],
+  attack:[],
+  run:[],
   inventory:['Original Chickenn Sandwich']
 };
 var enemy3 = {
   name: 'BACANATOR',
-  hitPoints: 60,///should bea funciton that gets a random number
-  defense:[80],
-  attack:[60],
-  run:[0];
+  hitPoints: [100],
+  defense:[],
+  attack:[],
+  run:[],
   inventory:['Checker Fries']
 };
 
 while (i < 1){
-  function game(a){
-    if (a === 'bacon'){
+  function game(first){
+    if (first === 'bacon'){
       console.log('You are in!');
-      var b = readline.question('This game is not for the faint of hearts, cry babies, or poopie heads are you any of those?');
-      if (b === 'no'){
-        var c = readline.question('Okay buddy...made it this far. Now we need to make it around the world of bacon without losing our bacon to some of the ragamuffins that frequent this section of Bacon. Do you wnat to walk? Type w ding dong!');
-        if (c === 'w'){
+      var second = readline.question('This game is not for the faint of hearts, cry babies, or poopie heads are you any of those?');
+      if (second === 'no'){
+        var third = readline.question('Okay buddy...made it this far. Now we need to make it around the world of bacon without losing our bacon to some of the ragamuffins that frequent this section of Bacon. Do you want to walk? Type w ding dong!');
+        if (third === 'w'){
           //Initiate random num function
-          getRandomInt(min,max);
-          console.log('Here2');
-        }
-        if (c === 'w'){
-          var d = readline.question('Okay not attacked yet...but this is the land of bacon and eveyone is always looking to take some bacon. Do you want to walk? Type w');
-
-
-          console.log('Here4');
+          console.log('hi1')
+          getRandomInt();
+          console.log('hi2');
+          var ninth = readline.question('Press Print to see your inventory and player health');
+          if (ninth === 'Print'){
+            console.log(player);
+            return;
+          } else {
+            return;
+          }
         } else {
           console.log('Come back next time when a grow a pair of.....BACON!!');
           return;
@@ -70,46 +72,92 @@ while (i < 1){
 
 
   ///get random number between 1-30
-  function getRandomInt(min, max) {
-
+  function getRandomInt() {
+    var min = 1;
+    var max = 30;
+    console.log('hi3')
     var randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log('hi4')
+    console.log(randomNum);
     walking(randomNum);
     return;
   }
   /////player walks if the player gets a random numbers that is divisble by 3 from a
   //////range of 1-30. (30% chance of getting an enemy)
-  function walking(randomNum){
-    if (randomNum % 3 === 0){
-      console.log('Here1');
+  function walking(walkRand){
+    if (walkRand % 3 === 0){
+      console.log(walkRand);
+      console.log('hi5')
       randomEnemy();
       return;
-    } else if (randomNum % 3 !== 0){
-      console.log('Here3');
+    } else if (walkRand % 3 !== 0){
+      console.log(walkRand);
+      console.log('hi6')
+      var fourth = readline.question('Want to play again Ding a Ling? if yes type y!');
+      if (fourth === 'y'){
+        //Initiate random num function
+        console.log('hi7')
+        var min = 1;
+        var max = 30;
+        getRandomInt(min,max);
+
+      } else {
+        console.log('hi8');
+        i=1;
+        console.log('hi9');
+      }
       return;
 
     }
   }
 
   ///enemy generator, use random number and set ranges.
-  function randomEnemy(min, max) {
+  function randomEnemy() {
+    var min = 1;
+    var max = 30;
       var randomEnemyNum = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log('hi11');
       enemyGenerator(randomEnemyNum);
       return;
   }
-  function enemyGenerator (enemy){
-    if (enemy >= 20 && enemy <= 30){
-      var e = readline.question('Type r to run; a to attack')
-      if (e === 'a'){
+  function enemyGenerator (randomEnemyNum){
+    if (randomEnemyNum >= 20 && randomEnemyNum <= 30){
+      console.log('Hey Punk, give me your bacon!!');
+      var fifth = readline.question('We have came across and angered the most powerful boss in Bacon City. The Baconator. We will have to out a good fight to beat this boss. Type r to run; a to attack')
+      if (fifth === 'a'){
+        console.log('You have chosen to fight. Good luck!');
         randomAttack();
-      } else if (e === 'r'){
-        //run run function
+      } else if (fifth === 'r'){
+        console.log('You have chosen to run like the wuss you are!');
+        randomRunning();
       }
-      return console.log('enemy1');
+      return;
 
-    } else if (enemy >= 9 && enemy <= 19){
-      return console.log('enemy2');
-    } else if (enemy >= 1 && enemy<=10){
-      return console.log('enemy3');
+    } else if (randomEnemyNum >= 9 && randomEnemyNum <= 19){
+      console.log('hi13');
+      var sixth = readline.question('Oh oh...The Whooper has taken some interest in our bacon. Type r to run; a to attack')
+      if (sixth === 'a'){
+        console.log('hi14');
+        console.log('You have chosen to fight. Good luck!');
+        randomAttack();
+      } else if (sixth === 'r'){
+        console.log('You have chosen to run like the wuss you are!');
+        randomRunning();
+      }
+      return;
+
+    } else if (randomEnemyNum >= 1 && randomEnemyNum <=10){
+    console.log('hi15');
+    var seventh = readline.question('Type r to run; a to attack')
+    if (seventh === 'a'){
+      console.log('hi16');
+      randomAttack();
+    } else if (seventh === 'r'){
+      console.log('hi17');
+      randomRunning();
+    }
+    return;
+
     }
   }
   //////Player attacks. random number generated vetween 1 - 100. for the enemy and player defense and attack.
@@ -119,9 +167,11 @@ while (i < 1){
   //////
   //////
   //////
-  var randAttackMax = 100;
-  var randAttackMin = 1;
-  function randomAttack(randAttackMin, randAttackMax) {
+
+  function randomAttack() {
+    console.log('hi18');
+    var randAttackMax = 100;
+    var randAttackMin = 1;
       playerAttack = Math.floor(Math.random() * (randAttackMax - randAttackMin + 1)) + randAttackMin;
       playerDefense = Math.floor(Math.random() * (randAttackMax - randAttackMin + 1)) + randAttackMin;
       player.attack.push(playerAttack);
@@ -130,98 +180,111 @@ while (i < 1){
       enemyDefense = Math.floor(Math.random() * (randAttackMax - randAttackMin + 1)) + randAttackMin;
       enemy1.attack.push(enemyAttack);
       enemy1.defense.push(enemyDefense);
-      // var randomAttackNum = Math.floor(Math.random() * (randAttackMax - randAttackMin + 1)) + randAttackMin;
       if (playerAttack > enemyDefense){
+        console.log('hi19');
         var newEnemyDefense = enemyDefense - playerAttack;
-        enemy1.defense.push(newEnemyDefense);
+        enemy1.defense[0] = newEnemyDefense;
       } else if (playerAttack < enemyDefense) {
+        console.log('hi20');
         var newPlayerDefense = playerDefense - 10;
-        player.defense.push(newPlayerDefense);
+        player.defense[0]= newPlayerDefense;
       }
       ///////run enemy counter attack
+      enemyCounterAttack();
       return;
   }
-//////enemyAttack
-function enemyCounterAttack(rand){
+//////enemy counter player attack. this runs after random attack.
+function enemyCounterAttack(){
+  var randAttackMax = 100;
+  var randAttackMin = 1;
   playerCounterDefense = player.defense[0];
   enemyCounterAttack = Math.floor(Math.random() * (randAttackMax - randAttackMin + 1)) + randAttackMin;
   if (playerCounterDefense > enemyCounterAttack){
-    //////palyer wins
-    //////if enemy dead add item to invetory
-    //////else ask to fight same enemy or another
-    ////////if same randomAttack function
-    //////if another run getRandomInt function
+    console.log('hi21');
+    console.log('You win fight!');
+
+    //////if enemy dead add item to invetory and HP
+    //////ask player if he wnast to play again
+    ////////if yes run getRandomInt function
     /////ask if you want to play again
   } else if (playerCounterDefense < enemyCounterAttack){
+    console.log('hi22');
     ///player loses
-    //////if player defnse = 0 player is dead
+    //////if player defense = 0 player is dead
     ///////if not ask to play again
     ////if no quit
     //////if yes run getRandomInt
     var newPlayerDefense = playerDefense - 10;
     player.defense.push(newPlayerDefense);
   }
-  ///////run enemy counter attack
+
   return;
+
+
+  ///////
+  ///////
+ /////This is the enemy counter to player runnning
+ var randRunMax = 100;
+ var randRunMin = 1;
+ function enemyCounterRun(randRunMin, randRunMax) {
+   console.log('hi23');
+     playerRun = Math.floor(Math.random() * (randRunkMax - randRunMin + 1)) + randRunMin;
+     playerDefense = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
+     player.Run.push(playerRun);
+     player.defense.push(playerDefense);
+     enemyRun = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
+     enemyDefense = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
+     enemy1.Run.push(enemyRun);
+     enemy1.defense.push(enemyDefense);
+     if (playerRun > enemyDefense){
+       console.log('hi24');
+       var newEnemyDefense = enemyDefense - playerRun;
+       enemy1.defense[0] = newEnemyDefense;
+     } else if (playerRun < enemyDefense) {
+       console.log('hi25');
+       var newPlayerDefense = playerDefense - 10;
+       player.defense.push(newPlayerDefense);
+     }
+     ///////run enemy counter attack
+     enemyCounterAttack();
+     return;
+ }
+
+
 
 //////player runs. random number generated that decdides the player run numer
 ///////from 2 numbers thus 50% chance to get away or get caught,
 
-var low = 1;
-var high = 2;
-function randomRunning(low, high) {
-    var randomRunNum = Math.floor(Math.random() * 2) + 1;
-    playerRun(randomRunNum);
+function randomRunning() {
+
+  console.log('hi18');
+    var randRun = Math.random() * 1;
+    playerRun(randRun);
     return;
 }
-function playerRun(rand){
-  if (rand <= 1 ){
+function playerRun(randRun){
+  console.log('hi19');
+  if (randRun <= .5 ){
     var maxRun = 30;
     console.log('You escaped');
-    ////ask to play again
-    //////if yes run getRandomInt function
-    ////if no quit game
-    return console.log(maxRun);
-  } else if (rand > 1){
-    var midRun = 20;
+    var d = readline.question('Would you like to play again? if yes type y')
+    if (d === 'y'){
+      console.log('hi20');
+      getRandomInt();
+    } else {
+      return;
+    }
+  } else if (randRun > .5){
     console.log('You got caught!');
-    ////run enemyCounterAttack
-    return console.log(midRun);
+    ////run enemyCounterrun
+    console.log('hi16');
+    enemyCounterRun();
+    return;
   }
 }
-randomRunning();
-//////player defense. random number generated that decdides the player defense number with 30 being the max,
-//////20 mid, 10 lowest defense
-function randomADefense(min, max) {
-    var randomDefenseNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    playerDefense(randomDefenseNum );
-    // console.dir(playerAttacking);
-    return;
-}
-function playerDefense(rand){
-  if (rand >= 20 && rand <= 30){
-    var maxDefense = 30;
-    return console.log(maxDefense);
-  } else if (rand >= 9 && rand <= 19){
-    var midDefense = 20;
-    return console.log(midDefense);
-  } else if (rand >= 1 && rand <= 10){
-    var lowDefense = 10;
-    return console.log(lowDefense);
+
+
   }
-}
-randomDefense(1,30);
-//////enemy attacks. random number generated that decdides the player attack numer with 30 being the max,
-//////20 mid, 10 lowest attack
-function randomEnemyAttack(min, max) {
-    var randomEnemyAttackNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    playerAttacking(randomEnemyAttackNum);
-    console.dir(EnemyAttacking);
-    return;
-}
-
-
-
   //////after this loop stops
     i++;
 }

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(/Users/user/Dev/assignments/exercises/luigis-bootstrap/SuperMario256.ttf);
+
+}
+
+.col-lg-12{
+  font-family: myFirstFont;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#body{
+  background-color: red;
+}
+#head{
+  align-items: flex-start;
+  background-color: yellow;
+  font-size: xx-large;
+}
+h1{
+  font-family: myFirstFont;
+  color: red;
+  padding-left: 10%;
+  /*font-size: xx-large;*/
+}
+#luigi{
+  padding: 3% 0 3% 0;
+}
+#aboutMe{
+  background-color: white;
+  color: red;
+  font-size: larger;
+}
+#mushroom{
+  align-items: flex-end;
+  background-color: yellow;
+  margin-bottom: 1%;
+}
+#mush{
+  padding: 1%;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
