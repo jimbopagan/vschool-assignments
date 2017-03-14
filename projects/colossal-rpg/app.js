@@ -1,7 +1,6 @@
 var readline = require('readline-sync');
 var greeting = readline.question('Greetings. You have just entered the realm of Bacon. To enter you must enter the word bacon');
-var min = 1;
-var max = 30;
+
 var i = 0;
 var player = {
   name: 'BL Thomas',
@@ -25,7 +24,7 @@ var enemy2 = {
   defense:[],
   attack:[],
   run:[],
-  inventory:['Original Chickenn Sandwich']
+  inventory:['Original Chicken Sandwich']
 };
 var enemy3 = {
   name: 'BACANATOR',
@@ -92,22 +91,19 @@ while (i < 1){
       return;
     } else if (walkRand % 3 !== 0){
       console.log(walkRand);
-      console.log('hi6')
+      console.log('hi6');
+      console.log('Player you have been lucky enough to prance around bacon city without getting jacked for your bacon.')
       var fourth = readline.question('Want to play again Ding a Ling? if yes type y!');
       if (fourth === 'y'){
         //Initiate random num function
         console.log('hi7')
-        var min = 1;
-        var max = 30;
-        getRandomInt(min,max);
-
+        getRandomInt();
       } else {
         console.log('hi8');
         i=1;
         console.log('hi9');
       }
       return;
-
     }
   }
 
@@ -116,16 +112,17 @@ while (i < 1){
     var min = 1;
     var max = 30;
       var randomEnemyNum = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(randomEnemyNum);
       console.log('hi11');
       enemyGenerator(randomEnemyNum);
       return;
   }
-  function enemyGenerator (randomEnemyNum){
-    if (randomEnemyNum >= 20 && randomEnemyNum <= 30){
+  function enemyGenerator (randEnemyNum){
+    if (randEnemyNum >= 20 && randEnemyNum <= 30){
       console.log('Hey Punk, give me your bacon!!');
-      var fifth = readline.question('We have came across and angered the most powerful boss in Bacon City. The Baconator. We will have to out a good fight to beat this boss. Type r to run; a to attack')
+      var fifth = readline.question('You have came across and angered the most powerful boss in Bacon City. The Baconator. We will have to out a good fight to beat this boss. Type r to run; a to attack')
       if (fifth === 'a'){
-        console.log('You have chosen to fight. Good luck!');
+        console.log('Ahh that is so cute....you have chosen to fight. Lets see what that bacon is made off. Good luck!');
         randomAttack();
       } else if (fifth === 'r'){
         console.log('You have chosen to run like the wuss you are!');
@@ -133,27 +130,30 @@ while (i < 1){
       }
       return;
 
-    } else if (randomEnemyNum >= 9 && randomEnemyNum <= 19){
+    } else if (randEnemyNum >= 9 && randEnemyNum <= 19){
       console.log('hi13');
+      console.log('Who do you think you are trotting that bacon around my territory?');
       var sixth = readline.question('Oh oh...The Whooper has taken some interest in our bacon. Type r to run; a to attack')
       if (sixth === 'a'){
         console.log('hi14');
-        console.log('You have chosen to fight. Good luck!');
+        console.log('Fight? I thought ypou would run by the look of you. Anyhow.....Good luck!.....i guess.');
         randomAttack();
       } else if (sixth === 'r'){
-        console.log('You have chosen to run like the wuss you are!');
+        console.log('Run? Figures! Now go change your underwear');
         randomRunning();
       }
       return;
 
-    } else if (randomEnemyNum >= 1 && randomEnemyNum <=10){
+    } else if (randEnemyNum >= 1 && randEnemyNum <=10){
     console.log('hi15');
-    var seventh = readline.question('Type r to run; a to attack')
+    console.log('Bacon?!? Bacon?!? I need bacon!.......can i smell you arm pits?');
+    var seventh = readline.question('You have run in to none other than the Big MAc....he is a ghastly fellow after years of taking steroids and smoking crack...he wants two things. Your bacon and to smell your armpits. So what do you say? Type r to run; a to attack')
     if (seventh === 'a'){
       console.log('hi16');
       randomAttack();
     } else if (seventh === 'r'){
       console.log('hi17');
+      console.log('They say a man dies only once, but a coward dies a million times....guess this is one more for the one million tally');
       randomRunning();
     }
     return;
@@ -168,7 +168,7 @@ while (i < 1){
   //////
   //////
 
-  function randomAttack() {
+  function randomAttack(){
     console.log('hi18');
     var randAttackMax = 100;
     var randAttackMin = 1;
@@ -182,33 +182,57 @@ while (i < 1){
       enemy1.defense.push(enemyDefense);
       if (playerAttack > enemyDefense){
         console.log('hi19');
+        console.log(playerAttack);
+        console.log(enemyDefense);
+
         var newEnemyDefense = enemyDefense - playerAttack;
         enemy1.defense[0] = newEnemyDefense;
+        console.log(enemyDefense);
+        console.log(enemy1.defense[0]);
       } else if (playerAttack < enemyDefense) {
         console.log('hi20');
+        console.log(playerAttack);
+        console.log(enemyDefense);
         var newPlayerDefense = playerDefense - 10;
         player.defense[0]= newPlayerDefense;
+        console.log(newPlayerDefense);
+        console.log(enemyDefense);
+        console.log(player.defense[0]);
       }
       ///////run enemy counter attack
-      enemyCounterAttack();
+      enemyCounterAttack(enemyAttack);
       return;
   }
 //////enemy counter player attack. this runs after random attack.
-function enemyCounterAttack(){
-  var randAttackMax = 100;
-  var randAttackMin = 1;
+function enemyCounterAttack(enemyAttack){
+  console.log('hi26');
   playerCounterDefense = player.defense[0];
-  enemyCounterAttack = Math.floor(Math.random() * (randAttackMax - randAttackMin + 1)) + randAttackMin;
-  if (playerCounterDefense > enemyCounterAttack){
+  console.log(playerCounterDefense);
+  if (playerCounterDefense > enemyAttack){
+    console.log('Your Defese:' + playerCounterDefense);
+    console.log('Enemy Attack:' + enemyAttack);
     console.log('hi21');
     console.log('You win fight!');
-
-    //////if enemy dead add item to invetory and HP
-    //////ask player if he wnast to play again
-    ////////if yes run getRandomInt function
-    /////ask if you want to play again
-  } else if (playerCounterDefense < enemyCounterAttack){
+    ////ask to play again
+    var playAgain = readline.question('Would you like to play again? if yes type y')
+      if (playAgain  === 'y'){
+        console.log('hi20');
+        getRandomInt();
+      } else {
+        return;
+      }
+    } else if (playerCounterDefense < enemyAttack){
+    console.log('Your Counter Defese:' + playerCounterDefense);
+    console.log('Enemy Attack:' + enemyAttack);
     console.log('hi22');
+    console.log('player lost');
+    var playAgain = readline.question('Would you like to play again? if yes type y')
+      if (playAgain  === 'y'){
+        console.log('hi20');
+        getRandomInt();
+      } else {
+        return;
+      }
     ///player loses
     //////if player defense = 0 player is dead
     ///////if not ask to play again
@@ -216,10 +240,11 @@ function enemyCounterAttack(){
     //////if yes run getRandomInt
     var newPlayerDefense = playerDefense - 10;
     player.defense.push(newPlayerDefense);
+    console.log('Your new Defense:' + newPlayerDefense);
   }
 
   return;
-
+}
 
   ///////
   ///////
@@ -228,14 +253,14 @@ function enemyCounterAttack(){
  var randRunMin = 1;
  function enemyCounterRun(randRunMin, randRunMax) {
    console.log('hi23');
-     playerRun = Math.floor(Math.random() * (randRunkMax - randRunMin + 1)) + randRunMin;
+     playerRun = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
      playerDefense = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
-     player.Run.push(playerRun);
-     player.defense.push(playerDefense);
+     player.run[0].push(playerRun);
+     player.defense[0].push(playerDefense);
      enemyRun = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
      enemyDefense = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
-     enemy1.Run.push(enemyRun);
-     enemy1.defense.push(enemyDefense);
+     enemy1.run[0].push(enemyRun);
+     enemy1.defense[0].push(enemyDefense);
      if (playerRun > enemyDefense){
        console.log('hi24');
        var newEnemyDefense = enemyDefense - playerRun;
@@ -243,7 +268,7 @@ function enemyCounterAttack(){
      } else if (playerRun < enemyDefense) {
        console.log('hi25');
        var newPlayerDefense = playerDefense - 10;
-       player.defense.push(newPlayerDefense);
+       player.defense[0].push(newPlayerDefense);
      }
      ///////run enemy counter attack
      enemyCounterAttack();
@@ -284,7 +309,7 @@ function playerRun(randRun){
 }
 
 
-  }
+
   //////after this loop stops
     i++;
 }
