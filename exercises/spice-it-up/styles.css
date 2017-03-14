@@ -1,0 +1,110 @@
+/*:root {
+  --first-color: #F5C6D6;
+  --second-color: #EE2E84;
+  --third-color: #85CFD8;
+  --fourth-color: #8DC63F;
+  --fifth-color: #E76E34;
+}
+background-color: var(--first-color);*/
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+.col-lg-12{
+  background-color: #F5C6D6;
+  /*height: 100px;
+  width: 100%;*/
+  border: 10px solid white;
+}
+
+.col-xs-3{
+  background-color: #EE2E84;
+  height: 100px;
+  width: 100%;
+  border: 10px solid white;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.col-lg-3{
+  background-color: #EE2E84;
+  height: 100px;
+  width: 25%;
+  border: 10px solid white;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.col-xs-6, .col-md-6{
+  height: 100px;
+  width: 50%;
+  background-color: #85CFD8;
+  border: 10px solid white;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.col-xs-8{
+  height: 100px;
+  width: 75%;
+  background-color: #8DC63F;
+  border: 10px solid white;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out
+}
+.col-xs-4{
+  height: 100px;
+  width: 25%;
+  background-color: #E76E34;
+  border: 10px solid white;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out
+}
+.box {
+    width: 300px;
+    height: 300px;
+    /*background-color: aquamarine;*/
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+
+}
+.box:hover {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: cyan;
+    transform: scale(2);
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;;
+
+}
+.element:hover {
+  transform: skewX(25deg);
+  /*transform: rotate(360deg);*/
+}
+.element2:hover{
+  transform: skewX(-25deg);
+  /*transform: rotate(360deg);*/
+}
+.element3:hover{
+  transform: translate(20px, 10px);
+}
+.element4:hover{
+  /*transform: translate3d(300px, 300px, -300px)*/
+
+  transform: rotate3d(300, 300, 300, 360deg);
+/*translateZ(z)*/
+}

@@ -194,7 +194,7 @@ while (i < 1){
         console.log(playerAttack);
         console.log(enemyDefense);
         var newPlayerDefense = playerDefense - 10;
-        player.defense[0]= newPlayerDefense;
+        player.defense[0] = newPlayerDefense;
         console.log(newPlayerDefense);
         console.log(enemyDefense);
         console.log(player.defense[0]);
@@ -209,14 +209,18 @@ function enemyCounterAttack(enemyAttack){
   playerCounterDefense = player.defense[0];
   console.log(playerCounterDefense);
   if (playerCounterDefense > enemyAttack){
+    ////give enemy inventory to player
+    if (){}
+    // var enemy1Inventory = enemy1.inventory[0];
     console.log('Your Defese:' + playerCounterDefense);
     console.log('Enemy Attack:' + enemyAttack);
     console.log('hi21');
     console.log('You win fight!');
+    console.log('Your prize:' + );
     ////ask to play again
     var playAgain = readline.question('Would you like to play again? if yes type y')
       if (playAgain  === 'y'){
-        console.log('hi20');
+        console.log('AAAAAAAAAA');
         getRandomInt();
       } else {
         return;
@@ -228,7 +232,7 @@ function enemyCounterAttack(enemyAttack){
     console.log('player lost');
     var playAgain = readline.question('Would you like to play again? if yes type y')
       if (playAgain  === 'y'){
-        console.log('hi20');
+        console.log('BBBBBBBB');
         getRandomInt();
       } else {
         return;
@@ -239,7 +243,7 @@ function enemyCounterAttack(enemyAttack){
     ////if no quit
     //////if yes run getRandomInt
     var newPlayerDefense = playerDefense - 10;
-    player.defense.push(newPlayerDefense);
+    player.defense[0] = newPlayerDefense;
     console.log('Your new Defense:' + newPlayerDefense);
   }
 
@@ -249,18 +253,22 @@ function enemyCounterAttack(enemyAttack){
   ///////
   ///////
  /////This is the enemy counter to player runnning
- var randRunMax = 100;
- var randRunMin = 1;
+
  function enemyCounterRun(randRunMin, randRunMax) {
+   var randRunMax = 100;
+   var randRunMin = 1;
    console.log('hi23');
      playerRun = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
      playerDefense = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
-     player.run[0].push(playerRun);
-     player.defense[0].push(playerDefense);
+     player.run[0]= playerRun;
+     player.defense[0] = playerDefense;
      enemyRun = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
      enemyDefense = Math.floor(Math.random() * (randRunMax - randRunMin + 1)) + randRunMin;
-     enemy1.run[0].push(enemyRun);
-     enemy1.defense[0].push(enemyDefense);
+
+     console.log(enemyRun);
+     console.log(enemyDefense);
+     console.log(playerRun);
+     console.log(playerDefense);
      if (playerRun > enemyDefense){
        console.log('hi24');
        var newEnemyDefense = enemyDefense - playerRun;
@@ -268,14 +276,12 @@ function enemyCounterAttack(enemyAttack){
      } else if (playerRun < enemyDefense) {
        console.log('hi25');
        var newPlayerDefense = playerDefense - 10;
-       player.defense[0].push(newPlayerDefense);
+       player.defense[0] = newPlayerDefense;
      }
      ///////run enemy counter attack
      enemyCounterAttack();
      return;
  }
-
-
 
 //////player runs. random number generated that decdides the player run numer
 ///////from 2 numbers thus 50% chance to get away or get caught,
@@ -290,7 +296,7 @@ function randomRunning() {
 function playerRun(randRun){
   console.log('hi19');
   if (randRun <= .5 ){
-    var maxRun = 30;
+    console.log(randRun);
     console.log('You escaped');
     var d = readline.question('Would you like to play again? if yes type y')
     if (d === 'y'){
@@ -300,17 +306,14 @@ function playerRun(randRun){
       return;
     }
   } else if (randRun > .5){
+    console.log(randRun);
     console.log('You got caught!');
     ////run enemyCounterrun
     console.log('hi16');
     enemyCounterRun();
     return;
   }
-}
-
-
-
-  //////after this loop stops
+}//////after this loop stops
     i++;
 }
 
