@@ -1,0 +1,99 @@
+body{
+  background-color: aqua;
+  font-family: 'Audiowide', cursive;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 2%;
+  background-image: url('/Users/user/Dev/assignments/projects/high-score/img/james-zwadlo-190040.jpg');
+  background-size: contain;
+}
+
+.row{
+  background-color: lightblue;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  border: 5px solid white;
+}
+.col-sm-12{
+    width: 100%;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  align-items: center;
+  /*margin: 0% 20% 20% 20%;*/
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: lightblue;
+    border: 5px solid white;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 20px;
+    margin 20px;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+th{
+  background-color: skyblue;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+  margin 20px;
+}
+.mobile-view{
+  display: none;
+}
+.header{
+  height: 100%;
+}
+nav.desktop-view ul{
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+
+}
+.hamburger{
+  font-size: 30px;
+}
+
+.social{
+  height:30px;
+  float:right;
+  padding-right: 5px;
+}
+.hamburger{
+  font-size: 30px;
+}
+@media screen and (max-width:875px) {
+  nav.desktop-view ul {
+    display:none;
+  }
+}
+
+@media screen and (max-width:875px){
+  nav.mobile-view {
+    display:block;
+    padding: 10px;
+}
+input{
+  margin-left: 5%;
+}
+@media screen and (max-width:875px) {
+  div.mobile-view1 form{
+    display:none;
+  }
+}
+/*mobile-view1*/

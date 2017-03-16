@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>High-Score Haven</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel='stylesheet' href='reset.css'/>
+    <link rel='stylesheet' href="styles.css"/>
+  </head>
+  <body>
+    <div class="header">
+      <nav class='desktop-view'>
+        <ul>
+          <li>Home</li>
+          <li>Story</li>
+          <li>About</li>
+        </ul>
+      </nav>
+      <nav class='mobile-view'>
+        <span class='hamburger'>&#9776;</span>
+        <img class='social' src='/Users/user/Dev/assignments/projects/high-score/img/facebook-4-xxl.png' />
+        <img class='social' src='/Users/user/Dev/assignments/projects/high-score/img/twitter-xxl.png'/>
+      </nav>
+    </div>
+
+    <div class= 'container'>
+      <div class=' row'>
+        <div class= 'col-lg-12'>
+
+          <div class='form'>
+            <form id= 'form'>
+              <div class= 'row'>
+                <div class= 'column'>
+                  Name: <input id='name' type ='text' name='name' autofocus="true" placeholder="name" required="true"/>
+                </div>
+                <div class= 'column'>
+                  Game: <input id='game' type ='text' name='game' placeholder="game" required="true"/>
+                </div>
+                <div class= 'column'>
+                  Date High Score Was Set: <input id='date' type ='date' min="1950-12-31" name='date' placeholder="date" required="true"/>
+                </div>
+                <div class= 'column'>
+                  High Score: <input id='score' type ='number' min="0" name='score' placeholder="score" required="true"/>
+
+                </div>
+                <div class= 'column'>
+                  Include Random Trash Talk: <input id='trash' type ='checkbox' name='trashTalk'/>
+
+                </div>
+                <div class= 'column'>
+                  Time based Game: <input id='timeBased' type ='checkbox' name='timeBased' />
+                  <input id='hours' type='numbers' placeholder="hours" min=0 max=24 />
+                  <input id='minutes' type='numbers' placeholder = "minutes" min=0 max=60/>
+                  <input id='seconds' type='numbers' placeholder = "seconds" min=0 max=60/>
+                </div>
+                <input type='button' id='button' value="Submit" />
+              </div>
+
+
+            </form>
+          </div>
+
+        </div>
+        <div class='col-lg-12'>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Game
+                </th>
+                <th>
+                  Date
+                </th>
+                <th>
+                  High Score
+                </th>
+                <th>
+                  Trash Talk
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td id='nameCell'>
+
+                </td>
+                <td id='gameCell'>
+
+                </td>
+                <td id='dateCell'>
+
+                </td>
+                <td id='scoreCell'>
+
+                </td>
+                <td id='trashCell'>
+
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src='app.js'></script>
+  </body>
+</html>
