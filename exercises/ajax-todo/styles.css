@@ -1,0 +1,21 @@
+h1{
+  color: red;
+}
+.container-fluid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*align-content: flex-end;*/
+  justify-content: flex-end;
+  background-image: url(/Users/user/Dev/assignments/exercises/ajax-todo/img/glenn-carstens-peters-190592.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.rows{
+  padding-top: 2%;
+  background-color: lightblue;
+  width: 50%;
+}
+li{
+  list-style-type: none;
+}

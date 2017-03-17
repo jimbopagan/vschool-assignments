@@ -1,0 +1,25 @@
+h1{
+  color: rgb(185, 41, 41);
+}
+.container{
+  background-image: url(/Users/user/Dev/assignments/projects/moms-list/img/igor-ovsyannykov-223114.jpg);
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row{
+  background-color: rgb(176, 102, 102);
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: 5px dashed rgb(185, 41, 41);*/
+  padding: 2px;
+}
+.column{
+  padding: 2px;
+  border: 150px solid ;
+  border-image: url(/Users/user/Dev/assignments/projects/moms-list/img/alexandre-chambon-28720.jpg);
+}
