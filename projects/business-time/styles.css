@@ -2,8 +2,11 @@ body{
   background-color:rgb(221, 227, 223);
   color: #fff;
 }
-  .container-fluid{
-  background-image: url('./img/annie-spratt-209137.jpg');
+#index-background{
+  background-image: url(/Users/user/Dev/assignments/projects/business-time/img/annie-spratt-209137.jpg);
+}
+  .row-background{
+  background-image: url('/Users/user/Dev/assignments/projects/business-time/img/paulo-morales-1975.jpg');
   background-size: cover;
   height: 100vh;
 }
@@ -51,9 +54,12 @@ h1, h6, h4{
   margin:1% 2% 1% 2%;
 }
 .container-fluid2{
-
   background-image: url('/Users/user/Dev/assignments/projects/business-time/img/agence-producteurs-locaux-damien-kuhn-97729.jpg');
   background-size: contain;
+  height: 100vh;
+}
+.container-fluid{
+  background-size: cover;
   height: 100vh;
 }
 .container-fluid3{

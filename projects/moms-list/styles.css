@@ -18,8 +18,60 @@ h1{
   /*border: 5px dashed rgb(185, 41, 41);*/
   padding: 2px;
 }
+.thirdRow{
+  background-color: rgb(176, 102, 102);
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: 5px dashed rgb(185, 41, 41);*/
+  padding: 2px;
+}
 .column{
   padding: 2px;
   border: 150px solid ;
   border-image: url(/Users/user/Dev/assignments/projects/moms-list/img/alexandre-chambon-28720.jpg);
+}
+.thirdColumn{
+  height: 100%;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+}
+.containerButton{
+  height:100vh;
+  background-color: mistyrose;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thirdContainer{
+  height:100vh;
+  background-color: mistyrose;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.columnBox{
+  height: 100%;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: row;
+
+}
+.box{
+  height: 100px;
+  width: 100px
+}
+#div1{
+  background-color: red;
+}
+#div2{
+  background-color: blue;
+}
+#div3{
+  background-color: yellow;
+}
+#div4{
+  background-color: green;
 }

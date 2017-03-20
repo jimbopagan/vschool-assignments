@@ -13,6 +13,9 @@ $( "#button" ).on('click', function(){
     var name = $('#name').val();
     var game = $('#game').val();
     var date = $('#date').val();
+    localStorage.setItem('game', JSON.stringify(game));
+    var game = JSON.parse(localStorage.getItem('game'));
+
     if ($('#trash').is(':checked')){
       $('tbody').append('<tr><td>' + name + '</td>' + '<td>' + game + '</td>' + '<td>' + date + '</td>' + '<td>' + score + '</td>' + '<td>' + trash + '</td>' + '</tr>')
     } else {
