@@ -2,64 +2,61 @@ function Party (name, population){
   this.population = population;
   this.name = name;
 }
-var penguins = new Party('penguins', 1000000000);
-var communists = new Party('communists', 1000000000);
-
-function getRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  var rand = Math.floor(Math.random() * (max - min + 1)) + min;
-  return rand
-}
+var penguins = new Party('penguins', 1000000);
+var communists = new Party('communists', 1000000);
 
 function randomPartyAttacked(){
-  var rand = getRandom(1,2);
-  if(rand === 1){
+  var rand = Math.random();
+  console.log(rand);
+  if(rand >= .5){
     console.log('The communists are attacking');
     sendNuke(penguins, onHit, onMiss);
-    return penguins;
+    return 'penguins';
 
-  } else if (rand === 2){
+  } else if (rand < .5){
     console.log('The penguins are attacking');
     sendNuke(communists, onHit, onMiss);
-    return communists;
+    return 'communists';
   }
 }
 
 function onHit(party){
-  var numHit = getRandom(0, 1000000);
+  max=1000000;
+  min =1;
+  var numHit = Math.floor(Math.random() * (max - min + 1)) + min;
   return numHit;
 }
 
 function onMiss(party){
-  var numMiss = getRandom(0, 1000000);
-  return numMiss;
+  console.log('The attack missed! ' + party);
 }
 
 function sendNuke(party, onHit, onMiss){
   var attackSucessful = Math.random();
-  if (attackSucessful > .5){
+  if (attackSucessful >= .5){
     var totalHit = onHit(party);
     if(party.name === 'penguins'){
-      communists.population = communists.population - totalHit;
-    } else {
       penguins.population = penguins.population - totalHit;
+      console.log(`The communists hit the penguins for ${totalHit} leaving them with ${penguins.population} soldiers left`);
+    } else if (party.name === 'communists'){
+      communists.population = communists.population - totalHit;
+      console.log(`The penguins hit the communists for ${totalHit} leaving them with ${communists.population} soldiers
+ left`);
     }
 
-  } else {
-    var totalMiss = onMiss();
-    if(party.name === 'penguins'){
-      sendNuke(communists, onHit, onMiss);
-    } else {
-      sendNuke(penguins, onHit, onMiss);
-    }
+  } else if (attackSucessful < .5){
+    // console.log(`The attack on ${party.name} missed!`);
+        onMiss(party.name);
   }
 }
 var toggleParty = randomPartyAttacked();
 while(communists.population > 0 && penguins.population > 0){
   if (toggleParty === 'communists'){
-    toggleParty === 'penguins';
-  } else {
-    toggleParty === 'communists'
+    toggleParty = 'penguins';
+    sendNuke(penguins, onHit, onMiss);
+  } else if (toggleParty === "penguins"){
+    toggleParty = 'communists';
+    sendNuke(communists, onHit, onMiss);
+
   }
 }
