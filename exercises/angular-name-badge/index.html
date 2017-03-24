@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angular ng model</title>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+  <link rel='stylesheet' href='styles.css'/>
+</head>
+  <body ng-controller='mainCtrl'>
+    <div class='container'>
+      <div class='row'>
+        <div id='anyName' class='col-lg-12 col-sm-12'>
+          <form class='inputForm'>
+            <div class= 'inputBox'>
+              <div class='myInputBox1'>
+                <input placeholder="first name" type='text' ng-model='newPerson.firstName'/>
+                <input placeholder="email" type='text' ng-model='newPerson.email'/>
+                <input placeholder="phone" type='text' ng-model='newPerson.phone'/>
+                </div>
+              <div class='myInputBox2'>
+                <input placeholder="last name" type='text' ng-model='newPerson.lastName'/>
+                <input placeholder="Place of Birth" type='text' ng-model='newPerson.birthPlace'/>
+                <input placeholder="Favorite food" type='text' ng-model='newPerson.favFood'/>
+              </div>
+            </div>
+
+            <div>
+              <textarea rows="15" cols="50" ng-model='newPerson.aboutMySelf'></textarea>
+            </div>
+            <div>
+              <button ng-click='myFunc(newPerson)'>Submit</button>
+            </div>
+          </form>
+          <div class='outputForm'>
+              <div id=boxBottom>
+                <div class='myInputBox3'>
+                  <h3 ng-show='person' >Name: {{person.firstName}}</h3>
+                  <h3 ng-show='person' >Email: {{person.email}}</h3>
+                  <h3 ng-show='person' >Phone: {{person.phone}}</h3>
+                </div>
+                <div class='myInputBox4'>
+                  <h3 ng-show='person' >Last Name: {{person.lastName}}</h3>
+                  <h3 ng-show='person' >Birth Place: {{person.birthPlace}}</h3>
+                  <h3 ng-show='person' >Favorite Food: {{person.favFood}}</h3>
+                </div>
+              </div>
+
+            <div>
+              <textarea rows="15" cols="50">About My self: {{person.aboutMySelf}}</textarea>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src='app.js'></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.container-fluid{
+  height: 100vh;
+  background-image: url(/Users/user/Dev/assignments/exercises/angular-todo/img/jason-blackeye-217162.jpg);
+  /*background-color: lightblue;*/
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row{
+  background-size: contain;
+  background-color: lightyellow;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 1%;
+  opacity: .9;
+}
+.row1{
+  background-size: contain;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 1%;
+  opacity: .9;
+}

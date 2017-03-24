@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular ng model</title>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body ng-controller="mainCtrl">
+    <div class='container'>
+      <div class='row'>
+        <div class='col-lg-12 col-sm-12'>
+          <div class='box'>
+            <h1>{{setText1()}}</h1>
+            <input type='text' placeholder="name" ng-model='myText1'/>
+          </div>
+          <div class='box'>
+            <h1>{{setText2()}}</h1>
+            <input type='text' placeholder="name" ng-model='myText2'/>
+          </div>
+          <div class='box'>
+            <h1>{{setText3()}}</h1>
+            <input type='text' placeholder="name" ng-model='myText3'/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src='app.js'></script>
+  </body>
+</html>

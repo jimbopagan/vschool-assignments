@@ -1,0 +1,27 @@
+.container{
+  height: 100vh;
+  background-image: url(/Users/user/Dev/assignments/exercises/angular-ng-model/img/ales-krivec-14570.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-content: center;*/
+  align-items: center;
+
+  width:100%;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+}
+.col-lg-12{
+background-color: lightblue;
+width: 50%;
+padding: 1%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}

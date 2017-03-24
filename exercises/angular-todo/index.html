@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='style.css' />
+  </head>
+  <body ng-controller='mainControl'>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-xs-12 col-lg-12'>
+          <form>
+            <div class='form-group'><input class='form-control' type='text' placeholder="To Do" ng-model='newThing.todo'/></div>
+            <div class='form-group'><input class='form-control' type='url' placeholder="Attach imgUrl" ng-model='newThing.url'/></div>
+            <div class='form-group'><input class='form-control' type='number' placeholder="Price" ng-model='newThing.price'/></div>
+            <div class='form-group'><input class='form-control' type='text' placeholder="Description" ng-model='newThing.description'/></div>
+            <div class='form-group'><button class='form-control' ng-click='myFunc(newThing)' type='submit' >Submit</button> </div>
+          </form>
+        </div>
+      </div>
+      <div class='row1'>
+        <div class='col-xs-12 col-lg-12'>
+          <h1>Things To Do:</h1>
+          <div ng-repeat='todo in todos track by $index'>
+            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.todo}}</p></div>
+            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.url}}</p></div>
+            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.price}}</p></div>
+            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.description}}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src='https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js '></script>
+    <script src='app.js'></script>
+  </body>
+</html>

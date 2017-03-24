@@ -1,0 +1,13 @@
+.container{
+  background-size: contain;
+  background-size: 100vh;
+  background-image: url(/Users/user/Dev/assignments/exercises/yodaSpeak/img/bc1f0a00-ed0f-4bc5-835c-9de0059a19ab.jpg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+
+}
+h3{
+  color: red;
+}

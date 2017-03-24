@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel='stylesheet' href='style.css'/>
+  </head>
+  <body ng-controller='mainControl'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-lg-12 col-xs-12'>
+          <!--  Below the important thing is that i use ng-model='' and use the object that is arbitrary. the fucntion is going to give
+        it its own name within the function. but every input that im submitting i name the object .wahatever property of that new object
+      that is created automatically with a form submition. Also, text type is importatn for form validation-->
+          <form name="validateForm" novalidate>
+            <div>
+              <input type='text' name ='title' placeholder="title" class='form-control'placeholder="title" ng-model='newThing.title'/>
+            </div>
+            <div>
+              <input type='url' name ='imgUrl' placeholder="imgURL" class='form-control'placeholder="img URL" ng-model='newThing.image'/>
+            </div>
+            <div>
+              <input type='text' name ='description' placeholder="description" class='form-control'placeholder="Description" ng-model='newThing.description'/>
+            </div>
+            <div>
+              <button ng-click='myFunc(newThing)'>Submit</button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class='row2'>
+        <div class='col-lg-12 col-xs-12'>
+          <!-- below im gonna inout JS into html with {{}} and inside im gonna call the name of whatever arbitrary name
+          i use within the ng-repeat. this goes threw the uglyThingsarray i made-->
+          <div class='myRow' ng-repeat='person in uglyThings track by $index'>
+            <h1 >{{person.title}}</h1>
+            <p > {{person.description}}</p>
+            <img ng-src='{{person.image}}'/>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src='https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js '></script>
+    <script src='app.js'></script>
+  </body>
+</html>

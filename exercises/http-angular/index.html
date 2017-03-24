@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>HTTP and Angular</title>
+  </head>
+  <body ng-controller='mainControl'>
+    <ol>
+      <span ng-repeat='monster in pokemon'></span>
+      <li>
+        {{monster.name}}
+      </li>
+    </ol>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src='app.js' type="text/javascript"></script>
+  </body>
+</html>

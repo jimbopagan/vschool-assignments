@@ -1,0 +1,77 @@
+.inputForm{
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:  lavender ;
+  width: 600px;
+  height: 300px;
+  padding: 3%;
+
+}
+.inputBox{
+  /*border: 5px solid black;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /*background-color:  lavender ;
+  width: 75;
+  height: 300px;*/
+}
+.outputForm{
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color:lightyellow ;
+  width: 600px;
+  height: 300px;
+  padding: 3%;
+}
+.container{
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+
+.row{
+  display: row;
+
+}
+.myInputBox1{
+
+  display: flex;
+  flex-direction: column;
+  /*display:inline-block;*/
+}
+.myInputBox2{
+
+  display: flex;
+  flex-direction: column;
+  /*display:inline-block;*/
+}
+.myInputBox3{
+  display: flex;
+  flex-direction: column;
+}
+.myInputBox4{
+  display: flex;
+  flex-direction: column;
+}
+#boxBottom{
+  display: flex;
+  flex-direction: column;
+
+}
+#anyName{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
