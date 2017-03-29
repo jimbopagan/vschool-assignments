@@ -2,27 +2,51 @@
   height: 100vh;
   background-image: url(/Users/user/Dev/assignments/exercises/angular-todo/img/jason-blackeye-217162.jpg);
   /*background-color: lightblue;*/
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /*align-content: space-between;*/
   align-items: center;
+  /*justify-content: space-between;*/
 }
 .row{
   background-size: contain;
   background-color: lightyellow;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 75%;
-  padding: 1%;
+  padding: 2% 0 2% 0;
+
   opacity: .9;
+  /*margin: 8%;*/
 }
-.row1{
+#row1{
   background-size: contain;
   background-color: lightgreen;
   display: flex;
   flex-direction: column;
+  height: auto;
   width: 75%;
   padding: 1%;
   opacity: .9;
+  /*margin: 5%;*/
+  position: relative;
+  top:2%;
+}
+button{
+  /*padding-bottom: 1%;*/
+  /*margin-bottom: 1%;*/
+}
+span{
+  padding-left: 2%;
+}
+.strike{
+  text-decoration: line-through;
+}
+
+img{
+  padding-right: 1%;
+  height: 5%;
+  width: 5%;
 }

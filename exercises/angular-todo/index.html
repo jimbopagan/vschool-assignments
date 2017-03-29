@@ -11,25 +11,33 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-xs-12 col-lg-12'>
+          <h1>Enter To Do:</h1>
           <form>
-            <div class='form-group'><input class='form-control' type='text' placeholder="To Do" ng-model='newThing.todo'/></div>
-            <div class='form-group'><input class='form-control' type='url' placeholder="Attach imgUrl" ng-model='newThing.url'/></div>
+            <div class='form-group'><input class='form-control' type='text' placeholder="To Do" ng-model='newThing.title'/></div>
+            <div class='form-group'><input class='form-control' type='url' placeholder="Attach imgUrl" ng-model='newThing.imgUrl'/></div>
             <div class='form-group'><input class='form-control' type='number' placeholder="Price" ng-model='newThing.price'/></div>
             <div class='form-group'><input class='form-control' type='text' placeholder="Description" ng-model='newThing.description'/></div>
             <div class='form-group'><button class='form-control' ng-click='myFunc(newThing)' type='submit' >Submit</button> </div>
           </form>
         </div>
       </div>
-      <div class='row1'>
+      <div id='row1' class='row' ng-repeat='todo in todos track by $index'>
         <div class='col-xs-12 col-lg-12'>
-          <h1>Things To Do:</h1>
-          <div ng-repeat='todo in todos track by $index'>
-            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.todo}}</p></div>
-            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.url}}</p></div>
-            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.price}}</p></div>
-            <div ><input type="checkbox" /><p ng-class='strike'>{{todo.description}}</p></div>
-          </div>
-        </div>
+            <div ng-hide='editing'>
+
+              <div ng-class='{"strike": todo.completed}' ><input ng-model='todo.completed' type="checkbox" /><span> <img ng-src='{{todo.imgUrl}}'/>{{todo.title}}  {{todo.price}} {{todo.description}}</span><button ng-click='myDelete($index)'>Delete ToDo</button>
+              </div>
+            </div>
+            <div ng-show='editing'>
+              <h3>Edit to do</h3>
+              <div ><input class='form-control' type='text' placeholder="To Do" ng-model='todo.title'/></div>
+              <div ><input class='form-control' type='url' placeholder="Attach imgUrl" ng-model='todo.imgUrl'/></div>
+              <div ><input class='form-control' type='number' placeholder="Price" ng-model='todo.price'/></div>
+              <div ><input class='form-control' type='text' placeholder="Description" ng-model='todo.description'/></div>
+              <div ><button ng-click='edit(todo); editing = !editing'>Save</button> </div>
+              </div>
+            </div>
+            <button ng-click='editing = !editing'>EDIT</button>
       </div>
     </div>
 
