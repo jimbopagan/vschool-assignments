@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <div>
+            <input type='text' ng-model='pokeName'>
+            <button ng-click='addPokemon(pokeName)'>Add</button>
+            Delete<button ng-click='removePokemon(pokeName)'></button>
+        </div>
+        <div>
+            <ul>
+            <li ng-repeat='poke in pokemon'>{{poke}}</li>
+<!--                pokemon goes here-->
+           {{test}}
+            </ul>
+        </div>
+    </div>
+</div>

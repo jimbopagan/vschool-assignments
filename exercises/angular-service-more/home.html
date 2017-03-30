@@ -1,0 +1,20 @@
+<div class='container1'>
+    <div class='row'>
+        <div class='col-xs-12'>
+           <h1>Cartoon Network</h1>
+            <input placeholder='title' type='text' ng-model="newCartoon.title">
+            <input placeholder="description" type='text' ng-model="newCartoon.description">
+            <input placeholder="url" type='url' ng-model="newCartoon.imgUrl">
+            <button ng-click='addCart(newCartoon)'>Submit</button>
+        </div>
+    </div>
+</div>
+<div class='container1'>
+    <div class='row' ng-repeat='cartoon in cartoons '>
+        <div class='col-xs-12'>
+            <h2>{{cartoon.title}}</h2>
+            <h5>{{cartoon.description}}</h5>
+            <img ng-src='{{cartoon.imgUrl}}'>
+        </div>
+    </div>
+</div>

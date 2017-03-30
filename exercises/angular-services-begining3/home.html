@@ -1,0 +1,20 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-xs-12'>
+            <input type='text' ng-model='pokeName'>
+            <button ng-click='addPokemon(pokeName)'>Add</button>
+            <button ng-click='removePokemon(pokeName)'>Delete</button>
+        </div>
+    </div>
+</div>
+<div class='container'>
+    <div class='row'>
+        <div class='col-xs-12'>
+            <ul>
+<!--                poke goes here-->
+           <li ng-repeat='poke in pokemon'>{{poke}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{test}}
