@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetUp Refresher</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div ng-controller='mainControl'>
+        <input type='number' ng-model='number.num1'>
+        <input type='number' ng-model='number.num2'>
+        <button ng-click='add(number)'>SUM</button>
+         {{number.total}}
+    </div>
+    <div ng-controller='secondControl'>
+        <input type='number' ng-model='multNumber.num1'>
+        <input type='number' ng-model='multNumber.num2'>
+        <button ng-click='mult(multNumber)'>MULT</button>
+         {{multNumber.total}}
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

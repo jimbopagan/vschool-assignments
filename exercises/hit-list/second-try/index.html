@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit List</title>
+<!--    <link rel="stylesheet" href="">-->
+</head>
+
+<body ng-controller='mainControl'>
+<!--   hitlist here-->
+  <div ng-repeat='item in hitlist'>
+      <div>{{item.name}}</div>
+      <img ng-src='{{item.image}}'>
+<!--      <div>item.name</div>-->
+  </div>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src='services.js'></script>
+</body>
+</html>

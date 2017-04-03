@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!--    <link rel="stylesheet" href="">-->
+</head>
+
+<body ng-controller='mainControl'>
+<div class='container'>
+    <div class='row'>
+        <div class ='col-xs-12'>
+            <input placeholder='title' ng-model='newUgly.title'>
+            <input placeholder='url' ng-model='newUgly.url'>
+            <input placeholder='description' ng-model='newUgly.description'>
+            <button ng-click='myFunc(newUgly)'>Submit</button>
+        </div>
+    </div>
+    <div class= 'row'>
+        <div class ='col-xs-12' ng-repeat='item in uglies' >
+            <h3>{{item.title}}</h3>
+            <p>{{item.description}}</p>
+            <img ng-src='{{item.url}}'>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

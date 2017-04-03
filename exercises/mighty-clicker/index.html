@@ -13,19 +13,25 @@
     <div class='container'>
         <div class='row'>
             <div class='col-xs-12'>
+                
                     {{test}}
 <!--
-                <button ng-click='redFunc()'>RED</button>
-                <button ng-click='blueFunc()'>BLUE</button> 
+                    {{redScore}}
+                    {{blueScore}}
 -->
+
+                <button ng-click='redAdd(); blueSub()'>RED</button>
+                <button ng-click='blueAdd(); redSub()'>BLUE</button>
+                <button ng-click='blueReset(); redReset()'>Reset</button>
                 <!--            score will show here-->
-                <!--            <div><span>{{blue}}</span> vs. <span>{{red}}</span></div>-->
+                <div><span>{{blueScore}}</span> vs. <span>{{redScore}}</span></div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
     <script src="app.js"></script>
+    <script src='services/services.js'></script>
 </body>
 
 </html>

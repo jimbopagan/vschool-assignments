@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Badge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller='mainControl'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <div class='header'>Badge:</div>
+                <div class='inputs'>
+                    <input type='text' placeholder='first name' ng-model='newBadge.name'>
+                    <input type='email' placeholder='email' ng-model='newBadge.email'>
+                    <input type='number' placeholder='phone' ng-model='newBadge.phone'>
+                    <input type='text' placeholder='last name' ng-model='newBadge.lastname'>
+                    <input type='text' placeholder='place of birth' ng-model='newBadge.birth'>
+                    <input type='text' placeholder='favorite food' ng-model='newBadge.food'>
+                    <input type='text' placeholder='about yourself' ng-model='newBadge.aboutyou'>
+                    <button ng-click='myFunc(newBadge)'>Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <div class='output'>
+                    <div class='inputs' ng-repeat='person in persons track by $index'>
+                        <p>{{person.name}}</p>
+                        <p>{{person.email}}</p>
+                        <p>{{person.phone}}</p>
+                        <p>{{person.lastname}}</p>
+                        <p>{{person.birth}}</p>
+                        <p>{{person.food}}</p>
+                        <p>{{person.aboutyou}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
