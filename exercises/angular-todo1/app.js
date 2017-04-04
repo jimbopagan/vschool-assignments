@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
-app.controller('mainControl', ['$scope', '$http', function($scope, $http){
+app.controller('mainControl', ['$scope', todoService, function($scope, todoService){
   $scope.todos=[];
   $http.get('http://api.vschool.io/vschool/todo/').then(function(response){
     $scope.todos = (response.data);
@@ -17,5 +17,13 @@ app.controller('mainControl', ['$scope', '$http', function($scope, $http){
     })
   }
 
-  // $scope.myDelete = function (){}
+   $scope.myDelete = function(index){
+       var id = $scope.todos[index]._id;
+       $http.delete('http://api.vschool.io/vschool/todo/' + id).then(function(){
+           $scope.todos.splice(index, 1);
+       })
+   }
+   $scope.edit = function(item){
+    $http.put('http://api.vschool.io/vschool/todo/' + item._id, item)
+  }
 }])

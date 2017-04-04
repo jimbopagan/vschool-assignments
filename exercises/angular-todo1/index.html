@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html ng-app='myApp'>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel='stylesheet' href=style.css/>
     <title>Todo Practice</title>
-  </head>
-  <body ng-controller='mainControl'>
+</head>
+
+<body ng-controller='mainControl'>
     <div class='container'>
-      <div class='row'>
-        <div class='col-xs-12'>
-          <div><input type ='text' placeholder="title" ng-model='newTodo.title'/></div>
-          <div><input type ='number' placeholder="price" ng-model='newTodo.price'/></div>
-          <div><input type ='text' placeholder="description" ng-model='newTodo.description'/></div>
-          <div><input type ='url' placeholder="imgUrl" ng-model='newTodo.imgUrl'/></div>
-          <div><button ng-click='addTodo(newTodo)'>Add To do</button></div>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <div><input type='text' placeholder="title" ng-model='newTodo.title' /></div>
+                <div><input type='number' placeholder="price" ng-model='newTodo.price' /></div>
+                <div><input type='text' placeholder="description" ng-model='newTodo.description' /></div>
+                <div><input type='url' placeholder="imgUrl" ng-model='newTodo.imgUrl' /></div>
+                <div><button ng-click='addTodo(newTodo)'>Add To do</button></div>
+            </div>
         </div>
-      </div>
-      <div class='row'>
-        <div class='col-xs-12'>
-         <div ng-repeat='todo in todos track by $index'>
-             <div>{{todo.title}}/></div>
-          <div>{{todo.price}}</div>
-          <div>{{todo.description}}</div>
-          <div><img ng-src='{{todo.imgUrl}}'/></div>
-           <div><button ng-click='addTodo(todo)'>Add To do</button></div> 
-         </div>
-          
+        <div class="row" ng-repeat="something in todos track by $index">
+            <div class="col-xs-12">
+                <div ng-hide="editing">
+                    <div>
+                        <h3 ng-class="{'finished': something.completed}">{{something.title}}</h3><input type="checkbox" ng-click="edit(something)" ng-model="something.completed"></div>
+                    <div>{{something.description}}</div>
+                    <div>{{something.price}}</div>
+                    <div><img ng-src="{{something.imgUrl}}"></div>
+                    <button ng-click="delete($index)">Remove Item</button>
+                </div>
+                <div ng-show="editing">
+                    <h3>edit your item!!</h3>
+                    <div><input type="text" placeholder="{{something.title}}" ng-model="something.title"></div>
+                    <div><input type="url" placeholder="img URL" ng-model="something.imgUrl"></div>
+                    <div><input type="text" placeholder="Description" ng-model="something.description"></div>
+                    <div><input type="number" placeholder="Price in Dollars" ng-model="something.price"></div>
+                    <button ng-click="edit(something, $index); editing = !editing">Save</button>
+                </div>
+                <button ng-click="editing = !editing">Edit</button> {{ $index }}
+
+            </div>
         </div>
-      </div>
+
     </div>
-<!--    {{todos}}-->
+    <!--    {{todos}}-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
+
 </html>
