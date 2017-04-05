@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href='style.css'> 
+    <title></title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <a href="/#/home">Home Page Fool</a>
+                <a href="/#/about">About Page Fool</a>
+                <a href="/#/whyilove">Why I love</a>
+                
+            </div>
+        </div>
+         <ng-view></ng-view>
+    </div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+<script src='/app.js'></script>
+<script src='/home/home.js'></script>
+<script src='/about/about.js'></script>
+<script src='/whyilove/whyilove.js'></script>
+<script src='/directive.js'></script>
+</body>
+</html>

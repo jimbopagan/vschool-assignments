@@ -2,6 +2,13 @@
 
 var sleepIn = function(weekday, vacation){ 
     if (weekday !== true && vacation !== false ){
-        return true
-    } 
+        return true;
+    } else{
+        return false;
+    }
 }
+
+console.log(sleepIn(true, false));
+console.log(sleepIn(true, true));
+console.log(sleepIn(false, false));
+console.log(sleepIn(false, true));

@@ -1,0 +1,9 @@
+#state{
+    color: crimson;
+    text-shadow: 3px 2px black;
+/*    background-image: url(home/img/florida-best-beaches-610x350.jpg)*/
+}
+img{
+    width: 400px;
+    height: 400px;
+}

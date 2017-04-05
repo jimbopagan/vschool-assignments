@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller='mainControl'>
+  <div class='container'>
+      <div class='row'>
+          <div class='col-xs-12'>
+             <input ng-model='newToon.imgUrl'>
+             <input ng-model='newToon.title'>
+             <input ng-model='newToon.description'>
+             <button ng-click='myFunc(newToon)'>Submit</button>
+          </div>
+      </div>
+  </div>
+  <div class='row'>
+        <div class='col-xs-12' ng-repeat='cartoon in toonList'>
+            <img ng-src='{{cartoon.imgUrl}}'> 
+            <h2>{{cartoon.title}}</h2>
+            <p>{{cartoon.description}}</p>
+        </div>
+    </div>
+  
+  
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+</body>
+</html>
