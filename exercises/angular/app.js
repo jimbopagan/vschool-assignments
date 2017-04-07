@@ -6,7 +6,7 @@ app.controller('mainController', ['$scope', function($scope){
     firstName: 'John ',
     lastName: 'Johnson'
   }
-
+//
   $scope.getName = function (){
     return $scope.person.firstName + '' + $scope.person.lastName;
   }
