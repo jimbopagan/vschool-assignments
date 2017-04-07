@@ -1,9 +1,11 @@
 <div id='secondPage' class='container'>
-    <div class='row'>
-        <div class='col-xs-12'>
+    <div id='secondRow' class='row'>
+        <button ng-click='myShipFunc()'>Click for Competitor Ship</button>
+        <input min='0' max="39" type="=number" placeholder='Enter a Number for Your Ship' ng-model='num'>
 
-{{hero.name}}
-
+        <div>Your ship:{{spaceShips[num].name}} vs. {{spaceShips[num2].name}}
+            <button ng-click='shipPicker()'>Submit</button> <br>{{results}}
+            <br><a href='/#/page2'>reset</a>
         </div>
     </div>
 </div>

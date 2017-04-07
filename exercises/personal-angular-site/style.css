@@ -13,77 +13,123 @@ img {
     height: 250px;
     width: auto;
 }
-.container{
+
+.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-p{
+
+p {
     padding-left: 5%;
     padding-right: 5%;
 }
-.next{
+
+.next {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 2%;
 }
-.result{
+
+.result {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.prize{
+
+.prize {
     display: flex;
     flex-direction: column;
-    
 }
-.input{
+
+.input {
     display: flex;
     flex-direction: row;
     justify-content: center
-    
 }
 
-button, input{
+button,
+input {
     color: black;
     margin: 1%;
 }
-#titles
-{
-	position: absolute;
-	width: 18em;
-	height: 50em;
-	bottom: 0;
-	left: 50%;
-	margin-left: -9em;
-	font-size: 350%;
-	font-weight: bold;
-	text-align: justify;
-	overflow: hidden;
-	transform-origin: 50% 100%;
-	transform: perspective(300px) rotateX(25deg);
+
+#titles {
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
 }
-#titles:after
-{
-	position: absolute;
-	content: ' ';
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 60%;
-	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	pointer-events: none;
+
+#titles:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    pointer-events: none;
 }
-#titlecontent
-{
-	position: absolute;
-	top: 100%;
-	animation: scroll 100s linear 4s infinite;
+
+#titlecontent {
+    position: absolute;
+    top: 100%;
+    animation: scroll 100s linear 4s infinite;
 }
 
 @keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -170%;
+    }
+}
+
+#secondPage {
+    height: 100vh;
+    /*   background-size: 100vh;*/
+    background-image: url(img/maxresdefault.jpg);
+    background-size: contain
+}
+
+#ships {
+    height: auto;
+    background-color: black;
+    display: inline-block;
+    padding: 1%
+}
+
+#secondRow {
+    background-color: whitesmoke;
+    color: cadetblue;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#thirdView {
+    height: 100vh;
+    padding-top: 40%;
+    background-image: url(img/Star-Wars-3D-Printer-Models.jpg);
+    background-size: contain;
+}
+#thirdCol{
+    background-color: whitesmoke;
+    color: dodgerblue;
+    opacity: .8;
+    
 }

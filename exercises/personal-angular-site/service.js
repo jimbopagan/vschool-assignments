@@ -19,16 +19,25 @@ app.service('enemyService', ['$http', function ($http) {
 
 app.service('myShipService', ['$http', function ($http) {
 
-    this.myShip = function (num1) {
-        return $http.get('http://swapi.co/api/starships/' + num1)
+    this.myShip = function () {
+        
+        return $http.get('http://swapi.co/api/starships/')
 
     }
 }])
 
 app.service('enemyShipService', ['$http', function ($http) {
 
-    this.myEnemyShip = function (num2) {
-        return $http.get('http://swapi.co/api/starships/' + num2)
+    this.myEnemyShip = function () {
+        return $http.get('http://swapi.co/api/starships/')
+
+    }
+}])
+
+app.service('pageService', ['$http', function ($http) {
+
+    this.nextPage = function (nextPage) {
+        return $http.get( nextPage)
 
     }
 }])

@@ -23,12 +23,12 @@ app.controller('firstControl', ['$scope', 'personService', 'enemyService', funct
         var random = Math.floor(Math.random() * (max - min + 1)) + min;
         if (random > 1) {
             $scope.youwin = 'http://static.srcdn.com/wp-content/uploads/millennium-falcon-space.jpg';
-            $scope.results = 'The force is strong within you. You win';
+            $scope.results = 'You win! The force is strong within you. The Millenium Falcon is your prize.';
             
             
         } else if (random < 2) {
             $scope.youlose = 'http://altdaily.com/wp-content/uploads/spaceballs-the-movie-1973-winnebago-eagle-v-spaceship.jpg';
-            $scope.results = 'You have very little force..You need to find another hobby. You lose!';
+            $scope.results = 'You lose! You have very little force..and too much Schwartz. You need to find another hobby. The Eagle 5 is your prize.';
             
         }
 
