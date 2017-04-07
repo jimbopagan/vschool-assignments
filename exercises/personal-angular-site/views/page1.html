@@ -1,7 +1,41 @@
 <div class='container'>
     <div class='row'>
         <div class='col-xs-12'>
-            {{test}}
+            <h4>Enter a number to retrive your character</h4>
+            <div class='input'>
+                <input type='number' min='1' max='87' required ng-model='num1'>
+                <button ng-click='myFunc(num1); something =!something'>Submit</button>
+            </div>
+
+            <div class='prize' ng-hide='!something'>
+                <div>You vs. Random Contestant</div>
+                <div>{{hero.name}} vs. {{enemy.name}}</div>
+                <button type="button" class="btn btn-primary btn-sm"ng-click='winner()'>Click!</button>
+            </div>
+            <div class='result'>
+                <img ng-hide='!something' ng-src='{{youwin}}'>
+                <img ng-hide='!something' ng-src='{{youlose}}'> {{results}}
+                <br><a href='/#/page1'>reset</a>
+            </div>
+
+        </div>
+        <div class='col-xs-12' id="titles" ng-hide='something'>
+            <div id="titlecontent">
+                <p class="center">EPISODE 12...really! 12!<br /> A NEW HOPE FOR VSCHOOL THE LEGENDARY SCHOOL FOR JEDI'S</p>
+
+                <p>A long time ago, in a galaxy far, far away.... A challenge was issued amongst all the federation to find out who is the baddest individual in the galaxy.....at eating pies. Millions answered the call.</p>
+
+                <p>Out of those millions it was found out that only 8,586 were actually real contestants and and the rest were fake names created by a group of very bored 8th graders that wanted names like Seymore Butts to be displayed across the galaxy.</p>
+
+                <p>Out of those 8,586, 8500 removed themselves from the list because quote "they had literally anything else to do" and only initially agreed to do it as a favor to Java the Hut.</p>
+
+                <p>Out of the 88, one individual was eliminated when it was found out that his real name was Matt Damon. This is the story of those 87 brave individuals that answered the call.</p>
+            </div>
+
+
+
+
+
         </div>
     </div>
 </div>

@@ -17,3 +17,4 @@ app.config(['$routeProvider', function($routeProvider){
         redirectTo: "/views/page1.html"
     })
 }])
+

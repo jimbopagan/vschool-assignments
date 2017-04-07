@@ -3,8 +3,8 @@
 
 var diff21 = function(n){ 
     if (n > 21){
-        var total = 2 * (Math.abs(21 - n));
-        return total;
+        var total = (Math.abs(21 - n));
+        return total * 2;
     } 
 }
 
