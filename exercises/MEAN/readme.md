@@ -1,0 +1,1 @@
+This repo containe the mean stack app that is built through full stack mean stack course
