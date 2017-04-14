@@ -31,15 +31,15 @@ $(function(){
     $('#'+panelId).toggle();
     $('#'+panelId).html(content);
   });
-  // $('#btnId2').on('click', function(){
-  //   $('#div2').slideToggle(2000);
-  // });
-  // $('#btnId3').on('click', function(){
-  //   $('#div3').toggle(10000);
-  // });
-  // $('#btnId4').on('click', function(){
-  //   $('#div4').fadeToggle(2000);
-  // });
+   $('#btnId2').on('click', function(){
+     $('#div2').slideToggle(2000);
+   });
+   $('#btnId3').on('click', function(){
+     $('#div3').toggle(10000);
+   });
+   $('#btnId4').on('click', function(){
+     $('#div4').fadeToggle(2000);
+   });
 });
 $(function(){
   var $orders = $('#orders');
@@ -76,17 +76,17 @@ $(function(){
       console.log("Here's a friend!", data); //returns friend id#1
     }
   });
-  // $.ajax({
-  //   // type: 'PUT',
-  //   // data: {name: 'Billy Bob', age: 28},
-  //   url: 'json.js',
-  //   success: function() {
-  //     //no data...just a success (200) status code
-  //     console.log('Friend Updated Successfully!');
-  //   }
-  // });
+   $.ajax({
+     // type: 'PUT',
+     // data: {name: 'Billy Bob', age: 28},
+     url: 'json.js',
+     success: function() {
+       //no data...just a success (200) status code
+       console.log('Friend Updated Successfully!');
+     }
+   });
 
-  // $.ajax({
-  //   url:'file.txt'
-  // })
+   $.ajax({
+     url:'file.txt'
+   })
 })

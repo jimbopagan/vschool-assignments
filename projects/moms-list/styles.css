@@ -15,7 +15,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*border: 5px dashed rgb(185, 41, 41);*/
+  border: 5px dashed rgb(185, 41, 41);
   padding: 2px;
 }
 .thirdRow{
@@ -24,7 +24,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*border: 5px dashed rgb(185, 41, 41);*/
+  border: 5px dashed rgb(185, 41, 41);
   padding: 2px;
 }
 .column{

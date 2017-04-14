@@ -4,13 +4,15 @@
   "description": "full stack app",
   "main": "app.js",
   "scripts": {
-      "start": "node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
   },
   "devDependencies": {
     "mocha": "^3.2.0"
