@@ -1,0 +1,1 @@
+This repo contains the Rock The Vote Application. 

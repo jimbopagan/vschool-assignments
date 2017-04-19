@@ -44,8 +44,8 @@ var hotelSchema = new mongoose.Schema({
     description: String,
     photos:[String],
     currency:String,
-    review:[reviewSchema],
-    room:[roomSchema],
+    reviews:[reviewSchema],
+    rooms:[roomSchema],
     //Always store coordinates long east wes, latitude north and south
     location:{
         address:String,
